@@ -86,6 +86,15 @@ const answers_1 = {
     q30: ["A", "C", "D"]  
 };
 
+function resetForm() {
+    document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked')
+        .forEach(input => input.checked = false);
+
+    document.querySelectorAll('textarea')
+        .forEach(textarea => textarea.value = "");
+}
+
+
 function checkAnswers() {
     let confirmSubmit = confirm("Bạn có chắc chắn muốn nộp bài không?");
     
@@ -133,6 +142,7 @@ function checkAnswers() {
     }
 
     alert(`Bạn trả lời đúng ${score}/${totalQuestions} câu!`);
+    resetForm();
     document.querySelector(".test__section").style.display = "none";
     document.querySelector(".login__info__container").classList.toggle("display-none");
 }
