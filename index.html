@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+
+    <body>
+        <div class="login__info">
+            <div class="login__info__container container">
+                <div class="login__info__title">
+                    <h2>Vui lòng nhập các thông tin sau !</h2>
+                    <hr>
+                      <form class="row g-3">
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label">Họ và tên</label>
+                          <input type="text" class="form-control" id="inputEmail4" placeholder="Nguyen Van A">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label">Ngày tháng năm sinh</label>
+                          <input type="date" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Mã Sinh viên</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="B22DCCN001">
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress2" class="form-label">Lớp</label>
+                          <input type="text" class="form-control" id="inputAddress2" placeholder="E22CN02-B">
+                        </div>
+                        <div class="col-12">
+                          <button type="button" class="btn btn-primary mt-5" id="nutDangNhap" disabled>Đăng nhập</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="test__section container-fluid">
+            <div class="test__section__user__info">
+                <h2>Nguyen Van A</h2>
+                <h2>29/12/2004</h2>
+                <h2>B22DCDT321</h2>
+                <h2>E22CN02-B</h2>
+            </div>
+
+            <div class="test__section__body container">
+
+                <div class="test__section__1__quiz mt-5">
+                        <h2>Câu hỏi lựa chọn đúng/sai</h3>
+                        <form id="quizForm">
+                            <div class="question">
+                                <p>1. Mặt trời mọc ở hướng Tây.</p>
+                                <input type="radio" name="q1" value="true"> Đúng
+                                <input type="radio" name="q1" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>2. Nước sôi ở 100°C.</p>
+                                <input type="radio" name="q2" value="true"> Đúng
+                                <input type="radio" name="q2" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>3. Cá có thể sống trên cạn.</p>
+                                <input type="radio" name="q3" value="true"> Đúng
+                                <input type="radio" name="q3" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>4. Python là một ngôn ngữ lập trình.</p>
+                                <input type="radio" name="q4" value="true"> Đúng
+                                <input type="radio" name="q4" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>5. Một năm có 400 ngày.</p>
+                                <input type="radio" name="q5" value="true"> Đúng
+                                <input type="radio" name="q5" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>6. Trái đất quay quanh mặt trời.</p>
+                                <input type="radio" name="q6" value="true"> Đúng
+                                <input type="radio" name="q6" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>7. HTML là ngôn ngữ lập trình.</p>
+                                <input type="radio" name="q7" value="true"> Đúng
+                                <input type="radio" name="q7" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>8. JavaScript chỉ chạy trên trình duyệt.</p>
+                                <input type="radio" name="q8" value="true"> Đúng
+                                <input type="radio" name="q8" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>9. CSS dùng để định dạng giao diện web.</p>
+                                <input type="radio" name="q9" value="true"> Đúng
+                                <input type="radio" name="q9" value="false"> Sai
+                            </div>
+                            <div class="question">
+                                <p>10. Java và JavaScript là cùng một ngôn ngữ.</p>
+                                <input type="radio" name="q10" value="true"> Đúng
+                                <input type="radio" name="q10" value="false"> Sai
+                            </div>
+                            
+                        </form>
+
+                </div>
+
+                <div class="test__section__2__quiz mt-5">
+                        <h2>Câu hỏi trắc nghiệm</h2>
+                        <form id="quizForm">
+                            <div class="question">
+                                <p>1. Ngôn ngữ lập trình nào phổ biến nhất năm 2024?</p>
+                                <input type="radio" name="q11" value="A"> A. C++ <br>
+                                <input type="radio" name="q11" value="B"> B. Python <br>
+                                <input type="radio" name="q11" value="C"> C. JavaScript <br>
+                                <input type="radio" name="q11" value="D"> D. Java <br>
+                            </div>
+                            <div class="question">
+                                <p>2. Ai là người phát minh ra điện?</p>
+                                <input type="radio" name="q12" value="A"> A. Thomas Edison <br>
+                                <input type="radio" name="q12" value="B"> B. Nikola Tesla <br>
+                                <input type="radio" name="q12" value="C"> C. Albert Einstein <br>
+                                <input type="radio" name="q12" value="D"> D. Isaac Newton <br>
+                            </div>
+                            <div class="question">
+                                <p>3. Thành phố nào là thủ đô của Nhật Bản?</p>
+                                <input type="radio" name="q13" value="A"> A. Kyoto <br>
+                                <input type="radio" name="q13" value="B"> B. Osaka <br>
+                                <input type="radio" name="q13" value="C"> C. Tokyo <br>
+                                <input type="radio" name="q13" value="D"> D. Sapporo <br>
+                            </div>
+                            <div class="question">
+                                <p>4. Hệ điều hành nào được sử dụng phổ biến trên smartphone?</p>
+                                <input type="radio" name="q14" value="A"> A. Windows <br>
+                                <input type="radio" name="q14" value="B"> B. Linux <br>
+                                <input type="radio" name="q14" value="C"> C. Android <br>
+                                <input type="radio" name="q14" value="D"> D. MacOS <br>
+                            </div>
+                            <div class="question">
+                                <p>5. Năm nào Việt Nam giành được độc lập hoàn toàn?</p>
+                                <input type="radio" name="q15" value="A"> A. 1945 <br>
+                                <input type="radio" name="q15" value="B"> B. 1954 <br>
+                                <input type="radio" name="q15" value="C"> C. 1975 <br>
+                                <input type="radio" name="q15" value="D"> D. 1986 <br>
+                            </div>
+                            <div class="question">
+                                <p>6. Ai là nhà sáng lập Facebook?</p>
+                                <input type="radio" name="q16" value="A"> A. Steve Jobs <br>
+                                <input type="radio" name="q16" value="B"> B. Mark Zuckerberg <br>
+                                <input type="radio" name="q16" value="C"> C. Bill Gates <br>
+                                <input type="radio" name="q16" value="D"> D. Elon Musk <br>
+                            </div>
+                            <div class="question">
+                                <p>7. Đơn vị đo cường độ dòng điện là gì?</p>
+                                <input type="radio" name="q17" value="A"> A. Volt <br>
+                                <input type="radio" name="q17" value="B"> B. Ampere <br>
+                                <input type="radio" name="q17" value="C"> C. Watt <br>
+                                <input type="radio" name="q17" value="D"> D. Ohm <br>
+                            </div>
+                            <div class="question">
+                                <p>8. Nguyên tố nào có ký hiệu hóa học là 'O'?</p>
+                                <input type="radio" name="q18" value="A"> A. Oxy <br>
+                                <input type="radio" name="q18" value="B"> B. Vàng <br>
+                                <input type="radio" name="q18" value="C"> C. Bạc <br>
+                                <input type="radio" name="q18" value="D"> D. Hydro <br>
+                            </div>
+                            <div class="question">
+                                <p>9. Bộ phim nào có doanh thu cao nhất mọi thời đại?</p>
+                                <input type="radio" name="q19" value="A"> A. Avatar <br>
+                                <input type="radio" name="q19" value="B"> B. Avengers: Endgame <br>
+                                <input type="radio" name="q19" value="C"> C. Titanic <br>
+                                <input type="radio" name="q19" value="D"> D. The Lion King <br>
+                            </div>
+                            <div class="question">
+                                <p>10. Đâu là hành tinh lớn nhất trong Hệ Mặt Trời?</p>
+                                <input type="radio" name="q20" value="A"> A. Sao Hỏa <br>
+                                <input type="radio" name="q20" value="B"> B. Sao Thổ <br>
+                                <input type="radio" name="q20" value="C"> C. Sao Mộc <br>
+                                <input type="radio" name="q20" value="D"> D. Trái Đất <br>
+                            </div>
+                            
+                        </form>
+                </div>
+
+                <div class="test__section__3__quiz mt-5">
+                        <h2>Quiz Trắc Nghiệm - Chọn Nhiều Đáp Án</h2>
+                        <form id="quizForm">
+                            <div class="question">
+                                <p>1. Ngôn ngữ lập trình nào phổ biến hiện nay?</p>
+                                <input type="checkbox" name="q21" value="A"> A. Python <br>
+                                <input type="checkbox" name="q21" value="B"> B. JavaScript <br>
+                                <input type="checkbox" name="q21" value="C"> C. HTML <br>
+                                <input type="checkbox" name="q21" value="D"> D. C++ <br>
+                            </div>
+                            <div class="question">
+                                <p>2. Ai là nhà phát minh có ảnh hưởng lớn?</p>
+                                <input type="checkbox" name="q22" value="A"> A. Thomas Edison <br>
+                                <input type="checkbox" name="q22" value="B"> B. Nikola Tesla <br>
+                                <input type="checkbox" name="q22" value="C"> C. Albert Einstein <br>
+                                <input type="checkbox" name="q22" value="D"> D. Isaac Newton <br>
+                            </div>
+                            <div class="question">
+                                <p>3. Thành phố nào thuộc Nhật Bản?</p>
+                                <input type="checkbox" name="q23" value="A"> A. Tokyo <br>
+                                <input type="checkbox" name="q23" value="B"> B. Kyoto <br>
+                                <input type="checkbox" name="q23" value="C"> C. Seoul <br>
+                                <input type="checkbox" name="q23" value="D"> D. Osaka <br>
+                            </div>
+                            <div class="question">
+                                <p>4. Hệ điều hành nào có trên smartphone?</p>
+                                <input type="checkbox" name="q24" value="A"> A. Windows <br>
+                                <input type="checkbox" name="q24" value="B"> B. Android <br>
+                                <input type="checkbox" name="q24" value="C"> C. iOS <br>
+                                <input type="checkbox" name="q24" value="D"> D. Linux <br>
+                            </div>
+                            <div class="question">
+                                <p>5. Các quốc gia nào thuộc châu Á?</p>
+                                <input type="checkbox" name="q25" value="A"> A. Việt Nam <br>
+                                <input type="checkbox" name="q25" value="B"> B. Nhật Bản <br>
+                                <input type="checkbox" name="q25" value="C"> C. Canada <br>
+                                <input type="checkbox" name="q25" value="D"> D. Trung Quốc <br>
+                            </div>
+                            <div class="question">
+                                <p>6. Ai là tỷ phú nổi tiếng?</p>
+                                <input type="checkbox" name="q26" value="A"> A. Elon Musk <br>
+                                <input type="checkbox" name="q26" value="B"> B. Bill Gates <br>
+                                <input type="checkbox" name="q26" value="C"> C. Mark Zuckerberg <br>
+                                <input type="checkbox" name="q26" value="D"> D. Ronaldo <br>
+                            </div>
+                            <div class="question">
+                                <p>7. Nguyên tố nào là kim loại?</p>
+                                <input type="checkbox" name="q27" value="A"> A. Sắt <br>
+                                <input type="checkbox" name="q27" value="B"> B. Oxy <br>
+                                <input type="checkbox" name="q27" value="C"> C. Đồng <br>
+                                <input type="checkbox" name="q27" value="D"> D. Bạc <br>
+                            </div>
+                            <div class="question">
+                                <p>8. Ngôn ngữ nào do Google phát triển?</p>
+                                <input type="checkbox" name="q28" value="A"> A. Python <br>
+                                <input type="checkbox" name="q28" value="B"> B. Java <br>
+                                <input type="checkbox" name="q28" value="C"> C. Go <br>
+                                <input type="checkbox" name="q28" value="D"> D. Dart <br>
+                            </div>
+                            <div class="question">
+                                <p>9. Những hành tinh nào thuộc Hệ Mặt Trời?</p>
+                                <input type="checkbox" name="q29" value="A"> A. Sao Hỏa <br>
+                                <input type="checkbox" name="q29" value="B"> B. Sao Kim <br>
+                                <input type="checkbox" name="q29" value="C"> C. Sao Mộc <br>
+                                <input type="checkbox" name="q29" value="D"> D. Sao Diêm Vương <br>
+                            </div>
+                            <div class="question">
+                                <p>10. Các loại động vật có vú?</p>
+                                <input type="checkbox" name="q30" value="A"> A. Cá voi <br>
+                                <input type="checkbox" name="q30" value="B"> B. Cá mập <br>
+                                <input type="checkbox" name="q30" value="C"> C. Hổ <br>
+                                <input type="checkbox" name="q30" value="D"> D. Chuột <br>
+                            </div>
+                        </form>
+                </div>
+
+                <div class="test__section__4__quiz mt-5">
+                    <form id="essayForm">
+                        <div class="question">
+                            <p>1. Hãy trình bày suy nghĩ của bạn về tầm quan trọng của công nghệ trong cuộc sống hiện đại?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>2. Mô tả một ngày làm việc hoặc học tập hiệu quả của bạn?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>3. Hãy phân tích tầm quan trọng của giáo dục trong sự phát triển của một quốc gia?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>4. Bạn nghĩ thế nào về ảnh hưởng của mạng xã hội đối với giới trẻ ngày nay?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>5. Nêu những lợi ích và tác hại của trí tuệ nhân tạo (AI) đối với con người?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>6. Bạn nghĩ gì về vấn đề biến đổi khí hậu và những biện pháp có thể áp dụng để giảm tác động?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea6" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>7. Tại sao việc đọc sách lại quan trọng đối với sự phát triển cá nhân?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea7" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>8. Theo bạn, làm thế nào để cân bằng giữa công việc và cuộc sống cá nhân?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea8" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>9. Vai trò của thể thao trong đời sống và sức khỏe của con người là gì?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea9" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>10. Những thói quen nào giúp bạn học tập và làm việc hiệu quả hơn?</p>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea10" rows="3"></textarea>
+                            </div>
+                        </div>
+        
+                    </form>
+                </div>
+            
+                <button type="button" class="btn btn-warning mb-5" onclick="checkAnswers()">Nộp bài</button>
+
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+
+</html>
