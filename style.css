@@ -7,6 +7,9 @@
     display: none !important;
 }
 
+body {
+    height: auto;
+}
 
 .login__info {
     height: 100vh;

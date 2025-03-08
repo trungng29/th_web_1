@@ -7,7 +7,7 @@ const user = {
     userClass: null
 };
 
-const userNameInp = document.getElementById("inputEmail4");
+const userNameInp = document.getElementById("inputName4");
 const userDobInp = document.getElementById("inputPassword4");
 const userIdInp = document.getElementById("inputAddress");
 const userClassInp = document.getElementById("inputAddress2");
@@ -145,6 +145,7 @@ function checkAnswers() {
     resetForm();
     document.querySelector(".test__section").style.display = "none";
     document.querySelector(".login__info__container").classList.toggle("display-none");
+    loginBtn.setAttribute("disabled", "true");
 }
 
 
