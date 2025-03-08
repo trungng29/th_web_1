@@ -7,7 +7,7 @@ const user = {
     userClass: null
 };
 
-const userNameInp = document.getElementById("inputName4");
+const userNameInp = document.getElementById("inputName14");
 const userDobInp = document.getElementById("inputPassword4");
 const userIdInp = document.getElementById("inputAddress");
 const userClassInp = document.getElementById("inputAddress2");
