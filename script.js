@@ -6,14 +6,16 @@ const user = {
     userId: null,
     userClass: null
 };
+
 document.addEventListener("DOMContentLoaded", function() {
-    const userNameInp = document.getElementById("inputName14");
+
+    const userNameInp = document.getElementById("inputName4");
     const userDobInp = document.getElementById("inputPassword4");
     const userIdInp = document.getElementById("inputAddress");
     const userClassInp = document.getElementById("inputAddress2");
-    
+
     const loginBtn = document.getElementById("nutDangNhap");
-    
+
     function checkInputs() {
         if (
             userNameInp.value.trim() !== "" &&
@@ -30,14 +32,14 @@ document.addEventListener("DOMContentLoaded", function() {
             loginBtn.setAttribute("disabled", "true");
         }
     }
-    
+
     [userNameInp, userDobInp, userIdInp, userClassInp].forEach(input => {
         input.addEventListener("input", checkInputs);
     });
-    
+
     loginBtn.addEventListener("click", function() {
         
-    
+
         let inpReturn = `
                         <h2>Họ và tên: ${user.userName}</h2>
                         <h2>Dob: ${user.userDob}</h2>
@@ -52,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         userIdInp.value = "";
         userClassInp.value = "";
     });
-    
+
     const answers_1 = {
         q1: "false", 
         q2: "true",  
@@ -85,40 +87,40 @@ document.addEventListener("DOMContentLoaded", function() {
         q29: ["A", "B", "C"],  
         q30: ["A", "C", "D"]  
     };
-    
+
     function resetForm() {
         document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked')
             .forEach(input => input.checked = false);
-    
+
         document.querySelectorAll('textarea')
             .forEach(textarea => textarea.value = "");
     }
-    
-    
+
+
     function checkAnswers() {
         let confirmSubmit = confirm("Bạn có chắc chắn muốn nộp bài không?");
         
         if (!confirmSubmit) {
             return;
         }
-    
+
         let score = 0;
         let totalQuestions = Object.keys(answers_1).length + 10; 
-    
+
         for (let key of Object.keys(answers_1).filter(k => typeof answers_1[k] === "string")) {
             let selected = document.querySelector(`input[name="${key}"]:checked`);
             if (selected && selected.value === answers_1[key]) {
                 score++;
             }
         }
-    
+
         for (let key of Object.keys(answers_1).filter(k => Array.isArray(answers_1[k]))) {
             let selected = Array.from(document.querySelectorAll(`input[name="${key}"]:checked`)).map(e => e.value);
             if (JSON.stringify(selected.sort()) === JSON.stringify(answers_1[key].sort())) {
                 score++;
             }
         }
-    
+
         let essayQuestions = {
             essay1: ["công nghệ", "tác động", "quan trọng"],
             essay2: ["hiệu quả", "lịch trình", "năng suất"],
@@ -131,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
             essay9: ["thể thao", "sức khỏe", "tập luyện", "lợi ích"],
             essay10: ["thói quen", "học tập", "hiệu quả", "làm việc"]
         };
-    
+
         for (let i = 1; i <= 10; i++) {
             let key = `essay${i}`;
             let answer = document.querySelector(`textarea[id="exampleFormControlTextarea${i}"]`).value.toLowerCase();
@@ -140,13 +142,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 score++;
             }
         }
-    
+
         alert(`Bạn trả lời đúng ${score}/${totalQuestions} câu!`);
         resetForm();
         document.querySelector(".test__section").style.display = "none";
         document.querySelector(".login__info__container").classList.toggle("display-none");
         loginBtn.setAttribute("disabled", "true");
     }
+
+
 });
-
-
