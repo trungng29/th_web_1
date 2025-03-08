@@ -1,10 +1,19 @@
 *, *::before, *::after, body * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 !important;
 }
 
 .display-none {
     display: none !important;
+}
+
+.display-block {
+    display: block !important;
 }
 
 body {
@@ -71,3 +80,91 @@ body {
     margin: 20px 0;
 }
 
+.round__button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(211, 211, 211, 0.288);
+    transition: box-shadow 0.1s ease-in-out;
+    transition: border 0.1s ease-in-out;
+    border: 2px solid transparent;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round__button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid lightblue;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: border 0.1s ease-in-out;
+}
+
+.round__button i {
+    transition: color 0.1s ease-in-out;
+}
+
+.round__button:hover i {
+    color: lightblue;
+    transition: color 0.1s ease-in-out;
+}
+
+.see__more {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(211, 211, 211, 0.288);
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.see__more i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.see__more__check {
+    width: 70%;
+    height: 70%;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(8, auto);
+    gap: 5px;
+}
+
+.see__more__check__num {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see__more button {
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.submit__button__see__more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0px;
+}
+
+.see__more__checked {
+    background-color: antiquewhite;
+    color: black;
+}

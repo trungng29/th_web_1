@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
         
 
         let inpReturn = `
-                        <h2>Họ và tên: ${user.userName}</h2>
-                        <h2>Dob: ${user.userDob}</h2>
-                        <h2>MSV: ${user.userId}</h2>
-                        <h2>Lớp: ${user.userClass}</h2>
+            <h2>Họ và tên: ${user.userName}</h2>
+            <h2>Dob: ${user.userDob}</h2>
+            <h2>MSV: ${user.userId}</h2>
+            <h2>Lớp: ${user.userClass}</h2>
         `
         document.querySelector(".test__section").style.display = "block";
         document.querySelector(".test__section__user__info").innerHTML = inpReturn;
@@ -54,6 +54,21 @@ document.addEventListener("DOMContentLoaded", function() {
         userIdInp.value = "";
         userClassInp.value = "";
     });
+
+    const seeMoreBtn = document.querySelector(".round__button");
+    const seeMorePanel = document.querySelector(".see__more");
+
+    seeMoreBtn.addEventListener("click", function() {
+        seeMoreBtn.classList.toggle("display-none");
+        seeMorePanel.classList.toggle("display-none");
+    })
+
+    const closeSeeMore = document.querySelector(".see__more i");
+
+    closeSeeMore.addEventListener("click", function() {
+        seeMoreBtn.classList.toggle("display-none");
+        seeMorePanel.classList.toggle("display-none");
+    })
 
     const answers_1 = {
         q1: "false", 
@@ -87,40 +102,31 @@ document.addEventListener("DOMContentLoaded", function() {
         q29: ["A", "B", "C"],  
         q30: ["A", "C", "D"]  
     };
-
-    function resetForm() {
-        document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked')
-            .forEach(input => input.checked = false);
-
-        document.querySelectorAll('textarea')
-            .forEach(textarea => textarea.value = "");
-    }
-
-
+    
     function checkAnswers() {
         let confirmSubmit = confirm("Bạn có chắc chắn muốn nộp bài không?");
         
         if (!confirmSubmit) {
             return;
         }
-
+    
         let score = 0;
         let totalQuestions = Object.keys(answers_1).length + 10; 
-
+    
         for (let key of Object.keys(answers_1).filter(k => typeof answers_1[k] === "string")) {
             let selected = document.querySelector(`input[name="${key}"]:checked`);
             if (selected && selected.value === answers_1[key]) {
                 score++;
             }
         }
-
+    
         for (let key of Object.keys(answers_1).filter(k => Array.isArray(answers_1[k]))) {
             let selected = Array.from(document.querySelectorAll(`input[name="${key}"]:checked`)).map(e => e.value);
             if (JSON.stringify(selected.sort()) === JSON.stringify(answers_1[key].sort())) {
                 score++;
             }
         }
-
+    
         let essayQuestions = {
             essay1: ["công nghệ", "tác động", "quan trọng"],
             essay2: ["hiệu quả", "lịch trình", "năng suất"],
@@ -133,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
             essay9: ["thể thao", "sức khỏe", "tập luyện", "lợi ích"],
             essay10: ["thói quen", "học tập", "hiệu quả", "làm việc"]
         };
-
+    
         for (let i = 1; i <= 10; i++) {
             let key = `essay${i}`;
             let answer = document.querySelector(`textarea[id="exampleFormControlTextarea${i}"]`).value.toLowerCase();
@@ -142,13 +148,42 @@ document.addEventListener("DOMContentLoaded", function() {
                 score++;
             }
         }
-
+    
         alert(`Bạn trả lời đúng ${score}/${totalQuestions} câu!`);
         resetForm();
         document.querySelector(".test__section").style.display = "none";
         document.querySelector(".login__info__container").classList.toggle("display-none");
         loginBtn.setAttribute("disabled", "true");
     }
+    
+    function resetForm() {
+        document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked')
+            .forEach(input => input.checked = false);
+    
+        document.querySelectorAll('textarea')
+            .forEach(textarea => textarea.value = "");
+    }
+    
+    let inputs = document.querySelectorAll("input");
+    
+    inputs.forEach(input => {
+        input.addEventListener("click", function() {
+            console.log("n" + input.getAttribute("name").slice(1))
+            document.getElementsByClassName("n" + input.getAttribute("name").slice(1))[0].classList.add("see__more__checked");
+        });
+    });
+
+    const btnSubmit = document.querySelectorAll(".btn-warning")
+
+    for ( let i = 0; i < btnSubmit.length; i++ ) {
+        btnSubmit[i].addEventListener("click", function() {
+            console.log("OK")
+            checkAnswers();
+        })
+    }
 
 
-});
+
+});    
+
+
