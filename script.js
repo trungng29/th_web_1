@@ -147,6 +147,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".login__info__container").classList.toggle("display-none");
         loginBtn.setAttribute("disabled", "true");
     }
-}
+});
 
 
