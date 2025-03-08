@@ -44,7 +44,7 @@ body {
 
 .test__section {
     /* background-color: blanchedalmond; */
-    min-height: 8000px;
+    /* min-height: 8000px; */
     display: none;
     position: absolute;
     top: 0;
